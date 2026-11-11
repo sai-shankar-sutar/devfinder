@@ -1,9 +1,11 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-
+import { store } from './app/Store.jsx'
+import {Provider} from 'react-redux'
+import MainLayout from './layouts/MainLayout.jsx'
 createRoot(document.getElementById('root')).render(
-
-    <App />
+<Provider store={store}> <MainLayout/>  </Provider>
+  
 
 )
